@@ -1,8 +1,1 @@
-export {
-  registerElements,
-  registerElement,
-  showElement,
-  hideElement,
-  VisualizeProvider,
-  useVisualize,
-} from "./Context";
+export { registerElements, registerElement, showElement, hideElement, VisualizeProvider, useVisualize } from "./Context";

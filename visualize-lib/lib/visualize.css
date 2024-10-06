@@ -1,16 +1,16 @@
 .visualize-element {
-  position: fixed;
-  overflow: auto;
-  z-index: 1000;
-  height: fit-content;
-  width: fit-content;
+	position: fixed;
+	overflow: auto;
+	z-index: 1000;
+	height: fit-content;
+	width: fit-content;
 }
 
 .visualize-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
 }
