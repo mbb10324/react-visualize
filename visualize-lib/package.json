@@ -1,0 +1,43 @@
+{
+  "name": "react-visualize",
+  "version": "0.0.1",
+  "main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "license": "Apache 2.0",
+  "description": "A library for handling the render state for components",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbb10324/react-visualize"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-eslint": "^9.0.5",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^9.11.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "globals": "^15.9.0",
+    "rollup": "^4.24.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.7.0"
+  }
+}
