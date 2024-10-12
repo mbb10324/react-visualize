@@ -4,6 +4,7 @@ import RegularModal from "./examples/RegulatModal";
 import DrawerRight from "./examples/DrawerRight";
 import { useEffect } from "react";
 import "./App.css";
+import DrawerTop from "./examples/DrawerTop";
 
 function App() {
 	useEffect(() => {
@@ -19,6 +20,12 @@ function App() {
 						hidden: { transform: "translateX(100%)" },
 						always: { transition: "all 0.3s ease-in-out" },
 					},
+					backdropAnimation: {
+						shown: { transform: "translateX(0)" },
+						hidden: { transform: "translateX(-100%)" },
+						always: { transition: "all 0.5s ease-in-out" },
+					},
+					backdropColor: "rgba(128, 255, 0, 0.1)",
 				},
 			},
 			{
@@ -32,11 +39,28 @@ function App() {
 						always: { transition: "all 0.3s ease-in-out" },
 					},
 					showBackdrop: false,
-					timeout: 5000,
+					timeout: 3000,
+				},
+			},
+			{
+				id: "drawer-top",
+				body: <DrawerTop />,
+				options: {
+					position: { top: "0", left: "0" },
+					animation: {
+						shown: { transform: "translateY(0)" },
+						hidden: { transform: "translateY(-100%)" },
+						always: { transition: "all 0.3s ease-in-out" },
+					},
 				},
 			},
 		]);
 	}, []);
+
+	// TODO:
+	// add backdrop onClick to options
+	// add type safety to id's
+	// add z-index to options
 
 	return (
 		<>
@@ -46,6 +70,7 @@ function App() {
 					<button onClick={() => showElement("regular")}>Regular Modal</button>
 					<button onClick={() => showElement("drawer-right")}>Drawer Right</button>
 					<button onClick={() => showElement("toast-top-right")}>Toast Top Right</button>
+					<button onClick={() => showElement("drawer-top")}>Drawer Top Into Modal</button>
 				</div>
 				<p>React visualize is a library that manages the state for hiding and showing ui components.</p>
 			</div>

@@ -1,0 +1,13 @@
+.drawer-top {
+	background-color: chartreuse;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	padding: 40px;
+	flex-direction: column;
+
+	width: 100vw;
+	height: 30vh;
+}
