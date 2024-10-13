@@ -3,7 +3,7 @@ import { CSSProperties, type ReactNode } from 'react';
 export type ElementOptions = {
 	position?: Position;
 	animation?: Animation;
-	hideBackdrop?: boolean;
+	showBackdrop?: boolean;
 	backdropAnimation?: Animation;
 	backdropColor?: string;
 	clickBackdropToClose?: boolean;

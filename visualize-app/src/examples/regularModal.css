@@ -8,5 +8,13 @@
 	padding: 40px;
 	flex-direction: column;
 	border-radius: 1rem;
-	max-width: 25vw;
+	width: 400px;
+	height: fit-content;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	.regular-modal {
+		width: 90vw;
+	}
 }

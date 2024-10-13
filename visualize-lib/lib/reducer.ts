@@ -5,6 +5,7 @@ const initialState: ElementState[] = [];
 
 const defaultOptions: ElementOptions = {
 	position: { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' },
+	showBackdrop: true,
 	backdropColor: 'rgba(0, 0, 0, 0.5)',
 	clickBackdropToClose: true,
 	animation: {

@@ -38,8 +38,6 @@ export default function Element(props: ElementProps) {
 		}
 	}
 
-	console.log(options.hideBackdrop);
-
 	return (
 		<>
 			<div
@@ -53,19 +51,18 @@ export default function Element(props: ElementProps) {
 			>
 				{body}
 			</div>
-			{!options.hideBackdrop ||
-				(options.hideBackdrop === undefined && (
-					<Backdrop
-						style={{
-							...options.backdropAnimation?.always,
-							...backdropStyles,
-							zIndex: options.backdropZIndex || 999,
-						}}
-						color={options.backdropColor}
-						show={show}
-						onClick={() => handleBackdropClick()}
-					/>
-				))}
+			{options.showBackdrop && (
+				<Backdrop
+					style={{
+						...options.backdropAnimation?.always,
+						...backdropStyles,
+						zIndex: options.backdropZIndex || 999,
+					}}
+					color={options.backdropColor}
+					show={show}
+					onClick={() => handleBackdropClick()}
+				/>
+			)}
 		</>
 	);
 }

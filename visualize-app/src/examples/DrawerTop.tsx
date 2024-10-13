@@ -12,7 +12,7 @@ export default function DrawerTop() {
 					showElement('regular');
 				}}
 			>
-				Close This And Modal
+				Close This And Open Modal
 			</button>
 		</div>
 	);
