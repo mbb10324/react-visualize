@@ -1,5 +1,5 @@
-import { useVisualize } from "./Context";
-import Element from "./Element";
+import { useVisualize } from './Context';
+import Element from './Element';
 
 export default function Container() {
 	const { state } = useVisualize();

@@ -1,13 +1,16 @@
-import { CSSProperties, type ReactNode } from "react";
+import { CSSProperties, type ReactNode } from 'react';
 
 export type ElementOptions = {
 	position?: Position;
 	animation?: Animation;
-	showBackdrop?: boolean;
+	hideBackdrop?: boolean;
 	backdropAnimation?: Animation;
 	backdropColor?: string;
 	clickBackdropToClose?: boolean;
 	timeout?: number;
+	elementZIndex?: number;
+	backdropZIndex?: number;
+	backdropOnClick?: () => void;
 };
 
 export type VisualizeContextType = {
@@ -27,9 +30,9 @@ export type VisualizeAction =
 	| { type: Actions.HIDE; payload: string };
 
 export enum Actions {
-	REGISTER = "REGISTER",
-	SHOW = "SHOW",
-	HIDE = "HIDE",
+	REGISTER = 'REGISTER',
+	SHOW = 'SHOW',
+	HIDE = 'HIDE',
 }
 
 export type Position = {

@@ -8,5 +8,11 @@ type BackdropProps = {
 export default function Backdrop(props: BackdropProps) {
 	const { onClick, style, color } = props;
 
-	return <div className="visualize-backdrop" onClick={() => onClick && onClick()} style={{ ...style, backgroundColor: color }} />;
+	return (
+		<div
+			className='visualize-backdrop'
+			onClick={() => onClick && onClick()}
+			style={{ ...style, backgroundColor: color }}
+		/>
+	);
 }

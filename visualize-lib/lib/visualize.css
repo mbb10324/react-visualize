@@ -1,7 +1,6 @@
 .visualize-element {
 	position: fixed;
 	overflow: auto;
-	z-index: 1000;
 	height: fit-content;
 	width: fit-content;
 }
@@ -12,5 +11,4 @@
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	z-index: 999;
 }

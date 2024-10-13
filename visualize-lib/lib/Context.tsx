@@ -1,8 +1,8 @@
-import { createContext, useContext, type ReactNode } from "react";
-import { ElementOptions, VisualizeContextType } from "./models";
-import { useVisualizeReducer } from "./reducer";
-import ModalContainer from "./Container";
-import "./visualize.css";
+import { createContext, useContext, type ReactNode } from 'react';
+import { ElementOptions, VisualizeContextType } from './models';
+import { useVisualizeReducer } from './reducer';
+import ModalContainer from './Container';
+import './visualize.css';
 
 const Context = createContext<VisualizeContextType | undefined>(undefined);
 
@@ -58,7 +58,7 @@ export function hideElement(id: string) {
 export function useVisualize() {
 	const context = useContext(Context);
 	if (context === undefined) {
-		throw new Error("useVisualize must be used within a VisualizeProvider");
+		throw new Error('useVisualize must be used within a VisualizeProvider');
 	}
 	return context;
 }

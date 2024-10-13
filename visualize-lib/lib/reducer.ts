@@ -1,22 +1,21 @@
-import { Actions, ElementState, ElementOptions, VisualizeAction } from "./models";
-import { useReducer, type ReactNode } from "react";
+import { Actions, ElementState, ElementOptions, VisualizeAction } from './models';
+import { useReducer, type ReactNode } from 'react';
 
 const initialState: ElementState[] = [];
 
 const defaultOptions: ElementOptions = {
-	position: { top: "50%", left: "50%", transform: "translate(-50%, -50%)" },
-	showBackdrop: true,
-	backdropColor: "rgba(0, 0, 0, 0.5)",
+	position: { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' },
+	backdropColor: 'rgba(0, 0, 0, 0.5)',
 	clickBackdropToClose: true,
 	animation: {
-		shown: { opacity: 1, pointerEvents: "auto" },
-		hidden: { opacity: 0, pointerEvents: "none" },
-		always: { transition: "all 0.5s ease-in-out" },
+		shown: { opacity: 1, pointerEvents: 'auto' },
+		hidden: { opacity: 0, pointerEvents: 'none' },
+		always: { transition: 'all 0.5s ease-in-out' },
 	},
 	backdropAnimation: {
-		shown: { opacity: 1, pointerEvents: "auto" },
-		hidden: { opacity: 0, pointerEvents: "none" },
-		always: { transition: "all 0.5s ease-in-out" },
+		shown: { opacity: 1, pointerEvents: 'auto' },
+		hidden: { opacity: 0, pointerEvents: 'none' },
+		always: { transition: 'all 0.5s ease-in-out' },
 	},
 };
 

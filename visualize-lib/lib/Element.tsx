@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { ElementState } from "./models";
-import { hideElement } from "./index";
-import Backdrop from "./Backdrop";
+import { useEffect, useState } from 'react';
+import { ElementState } from './models';
+import { hideElement } from './index';
+import Backdrop from './Backdrop';
 
 type ElementProps = {
 	elementState: ElementState;
@@ -29,29 +29,43 @@ export default function Element(props: ElementProps) {
 		}
 	}, [show, options.animation, options.backdropAnimation, options.timeout, id]);
 
+	function handleBackdropClick() {
+		if (options.backdropOnClick) {
+			options.backdropOnClick();
+		}
+		if (options.clickBackdropToClose) {
+			hideElement(id);
+		}
+	}
+
+	console.log(options.hideBackdrop);
+
 	return (
 		<>
 			<div
-				className="visualize-element"
+				className='visualize-element'
 				style={{
 					...options.position,
 					...options.animation?.always,
 					...managedStyles,
+					zIndex: options.elementZIndex || 1000,
 				}}
 			>
 				{body}
 			</div>
-			{options.showBackdrop && (
-				<Backdrop
-					style={{
-						...options.backdropAnimation?.always,
-						...backdropStyles,
-					}}
-					color={options.backdropColor}
-					show={show}
-					onClick={() => options.clickBackdropToClose && hideElement(id)}
-				/>
-			)}
+			{!options.hideBackdrop ||
+				(options.hideBackdrop === undefined && (
+					<Backdrop
+						style={{
+							...options.backdropAnimation?.always,
+							...backdropStyles,
+							zIndex: options.backdropZIndex || 999,
+						}}
+						color={options.backdropColor}
+						show={show}
+						onClick={() => handleBackdropClick()}
+					/>
+				))}
 		</>
 	);
 }
