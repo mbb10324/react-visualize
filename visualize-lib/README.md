@@ -16,10 +16,10 @@ react-visualize is a library designed to manage the render state of multiple UI 
 
 ## Features
 
--   Multi-element Rendering: Register and manage multiple visual elements simultaneously.
--   Customizable Options: Easily set animations, backdrop color, positioning, and more.
--   Singleton Pattern: Expose the register, show, and hide functions globally for easy use.
--   Global State Management: Handle the state of visual elements through a centralized reducer.
+- Multi-element Rendering: Register and manage multiple visual elements simultaneously.
+- Customizable Options: Easily set animations, backdrop color, positioning, and more.
+- Singleton Pattern: Expose the register, show, and hide functions globally for easy use.
+- Global State Management: Handle the state of visual elements through a centralized reducer.
 
 ## Installation
 
@@ -113,9 +113,9 @@ Your visual elements, such as modals or popovers, are rendered automatically by 
 `registerElement(id: string, body: ReactNode, options?: ElementOptions)`
 Registers a new element.
 
--   id: A unique identifier for the element.
--   body: The content to be rendered.
--   options: Optional configuration options for the element.
+- id: A unique identifier for the element.
+- body: The content to be rendered.
+- options: Optional configuration options for the element.
 
 `registerElements(elements: { id: string; body: ReactNode; options?: ElementOptions }[])`
 Registers multiple elements at once.
@@ -141,6 +141,9 @@ When registering an element, you can pass the following ElementOptions:
 | animation | Animation | CSS properties to animate showing and hiding. | {} |
 | backdropAnimation | Animation | CSS properties for the backdrop animation. | {} |
 | timeout | number | Duration in milliseconds to auto-hide the element. | undefined |
+| elementZIndex | number | Sets the z-index of the element. | 1000 |
+| backdropZIndex | number | Sets the z-index of the backdrop. | 999 |
+| backdropOnClick | () => void | Function to be called when the backdrop is clicked. | undefined |
 
 ## License
 
@@ -148,4 +151,4 @@ This project is licensed under the Apache 2.0 License. See the LICENSE file for 
 
 ## Github
 
-[https://github.com/mbb10324/react-visualize](https://github.com/mbb10324/react-visualize "react-visualize")
+[https://github.com/mbb10324/react-visualize](https://github.com/mbb10324/react-visualize 'react-visualize')
